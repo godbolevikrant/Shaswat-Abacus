@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID"
-         version="2.4"
-         xmlns="http://java.sun.com/xml/ns/j2ee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
-         http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<web-app
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+                        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
 
-    <display-name>shaswat_abacus_academy</display-name>
+    <!-- Application Name (used by servers & tools) -->
+    <display-name>Shaswat Abacus Academy</display-name>
 
+    <!-- ✅ SEO-Friendly Homepage -->
     <welcome-file-list>
-        <!-- ✅ ADD THIS LINE AT THE TOP -->
-        <welcome-file>pages/contact.jsp</welcome-file>
-
-        <welcome-file>index.html</welcome-file>
-        <welcome-file>index.htm</welcome-file>
-        <welcome-file>index.jsp</welcome-file>
-        <welcome-file>index.xhtml</welcome-file>
-        <welcome-file>default.html</welcome-file>
-        <welcome-file>default.htm</welcome-file>
-        <welcome-file>default.jsp</welcome-file>
-        <welcome-file>default.xhtml</welcome-file>
+        <welcome-file>pages/index.jsp</welcome-file>
     </welcome-file-list>
+
+    <!-- ✅ Force UTF-8 Encoding (important for SEO & content indexing) -->
+    <filter>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>ignore</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- ✅ Custom 404 Page (Very important for SEO) -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pages/404.jsp</location>
+    </error-page>
+
+    <!-- ✅ Custom 500 Error Page -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/pages/error.jsp</location>
+    </error-page>
 
 </web-app>

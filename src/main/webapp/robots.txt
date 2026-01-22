@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block sensitive folders
+Disallow: /WEB-INF/
+Disallow: /META-INF/
+
+# Block error pages from indexing
+Disallow: /pages/404.jsp
+Disallow: /pages/error.jsp
+
+# Sitemap location
+Sitemap: https://www.shashwatabacus.com/sitemap.xml

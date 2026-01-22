@@ -1,10 +1,15 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 <meta charset="utf-8" />
-<title>Shashwat Abacus Academy</title>
+<title>Best Abacus Classes in India | Shaswat Abacus Academy</title>
+
+<meta name="description" content="Shaswat Abacus Academy offers professional abacus training for kids to improve math skills, speed, and confidence." />
+
+<meta name="keywords" content="abacus classes, abacus training, mental math, kids abacus academy" />
+
+<meta name="robots" content="index, follow" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="keywords" content="Shashwat Abacus Academy" />
-<meta name="description" content="Shashwat Abacus Academy" />
+
 
 <!-- Favicon -->
 <link href="${pageContext.request.contextPath}/img/icon/shashwatlogo.png" rel="icon" />
