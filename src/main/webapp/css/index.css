@@ -1,0 +1,258 @@
+@charset "UTF-8";/* class page css
+.container-1 {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  border: 2px solid #babdc3;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+}
+.container-1:hover {
+  border-color: #007bff;
+}
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-section img {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-section {
+  flex: 2;
+  padding-left: 20px;
+}
+h1 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+li {
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .container-1 {
+    flex-direction: column;
+  }
+  .content-section {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+} */
+
+/* FAQ */
+.faq-section {
+  padding: 20px;
+  background-color: #f3f2f2;
+}
+.faq-section h2 {
+  padding-bottom: 20px;
+}
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.faq-container1 {
+  background-color: rgb(119, 181, 198);
+  padding: 20px;
+  width: 800px;
+  flex: 1 1 45%;
+}
+
+@media (max-width: 768px) {
+  .faq-container1 {
+    max-width: 95%;
+    flex: 1 1 100%;
+  }
+}
+
+.faq-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 10px;
+  background-color: #f1eeee;
+  color: rgb(20, 19, 19);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: bold;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background-color: #e0e0e0;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .faq-question {
+    font-size: 0.9rem;
+  }
+  .icon {
+    font-size: 1em;
+  }
+}
+
+/* steps home franchise css */
+
+/* --- Franchise Steps Section --- */
+.franchiseStepsSection {
+  padding: 60px 40px;
+  background-color: #f8f9fa;
+}
+
+/* Section heading */
+.franchiseStepsSection h2 {
+  font-family: "Handlee", cursive;
+  color: #007bff;
+  margin-bottom: 40px;
+}
+
+/* --- Rows for Steps --- */
+.steps-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* spacing between boxes horizontally */
+  margin-bottom: 30px; /* spacing between rows */
+  flex-wrap: wrap;
+}
+
+/* --- Flip Boxes --- */
+.step-box {
+  perspective: 1000px;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.step-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Flip effect */
+.step-box:hover .step-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Styling */
+.step-front,
+.step-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* heading top, paragraph middle, button bottom */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Side */
+.step-front {
+  background: #fff;
+}
+
+/* Back Side */
+.step-back {
+  background: #17a2b8;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* --- Headings --- */
+.step-front h5,
+.step-back h5 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* --- Paragraphs centered vertically --- */
+.step-front p,
+.step-back p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* --- Buttons --- */
+.btn-outline-primary,
+.btn-outline-light {
+  font-size: 14px;
+  padding: 6px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+/* Front Button */
+.btn-outline-primary {
+  border: 2px solid #17a2b8;
+  color: #17a2b8;
+  background: #fff;
+}
+
+.btn-outline-primary:hover {
+  background: #17a2b8;
+  color: #fff;
+}
+
+/* Back Button */
+.btn-outline-light {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: #fff;
+  color: #17a2b8;
+}
+
+/* aboutus goals css */
